@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using ERPVendas.Data;
+using ERPVendas.Services;
 
 namespace ERPVendas
 {
@@ -41,6 +42,7 @@ namespace ERPVendas
                         builder.MigrationsAssembly("ERPVendas")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
         }
 
